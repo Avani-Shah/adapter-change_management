@@ -1,0 +1,76 @@
+{
+  "id": "@acme/adapter-change_management",
+  "type": "Adapter",
+  "src": "main.js",
+  "export": "ServiceNowAdapter",
+  "roles": [
+    "admin",
+    "engineer",
+    "operator"
+  ],
+  "methods": [
+    {
+      "name": "getRecord",
+      "summary": "Get First Change Ticket",
+      "description": "Get the first ServiceNow change management ticket.",
+      "input": [],
+      "output": {
+        "name": "changeTicket",
+        "type": "object",
+        "description": "The first change change management ticket document.",
+        "schema": {
+          "title": "changeTicket",
+          "$ref": "changeRequest#/definitions/changeTicket"
+        }
+      },
+      "roles": [
+        "admin",
+        "engineer",
+        "operator"
+      ],
+      "task": true
+    },
+    {
+        "name": "postRecord",
+      "summary": "Create ServiceNow Record",
+      "description": "Creates a record in ServiceNow.",
+      "input": [],
+      "output": {
+        "name": "changeTicket",
+        "type": "object",
+        "description": "The first change change management ticket document.",
+        "schema": {
+          "title": "changeTicket",
+          "$ref": "changeRequest#/definitions/changeTicket"
+        }
+      },
+      "roles": [
+        "admin",
+        "engineer",
+        "operator"
+      ],
+      "task": true
+    },
+     {
+        "name": "connect",
+      "summary": "Connect to ServiceNow",
+      "description": "Complete a single healthcheck and emit ONLINE or OFFLINE.",
+      "input": [],
+      "output": {
+        "name": "changeTicket",
+        "type": "object",
+        "description": "The first change change management ticket document.",
+        "schema": {
+          "title": "changeTicket",
+          "$ref": "changeRequest#/definitions/changeTicket"
+        }
+      },
+      "roles": [
+        "admin",
+        "engineer",
+        "operator"
+      ],
+      "task": true
+    }
+  ]
+}
